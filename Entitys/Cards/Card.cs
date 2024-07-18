@@ -11,7 +11,6 @@ public abstract class Card
     public string Name { get; set; }
     public CardType CardType { get; set; }
     //
-    public bool IsSelected { get; set; } = false;
     public int CardNum { get; set; }
 
     public override string ToString(){

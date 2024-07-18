@@ -49,13 +49,19 @@ public partial class Ui_Card : Node2D
 	}
 
 	private bool _selected = false;
+	public bool Selectable {get; set;} = true;
+	[Signal] public delegate void I_was_selected_EventHandler();
 	private void _CardSelect(){
-		if(!_selected){
-			_borderColor.Color = _colorSelect;
+		if(Selectable){
+			if(!_selected){
+				_borderColor.Color = _colorSelect;
+			}
+			else{
+				_borderColor.Color = _colorDefault;
+			}
+			_selected = !_selected;
+			EmitSignal(SignalName.I_was_selected_);
 		}
-		else{
-			_borderColor.Color = _colorDefault;
-		}
-		_selected = !_selected;
+		
 	}
 }
