@@ -1,0 +1,83 @@
+[gd_scene load_steps=2 format=3 uid="uid://degao7ysdj6qi"]
+
+[ext_resource type="Script" path="res://Scripts/Entitys/Ui_Card.cs" id="1_iex2a"]
+
+[node name="UI_Card" type="Node2D"]
+script = ExtResource("1_iex2a")
+
+[node name="CardArea" type="MarginContainer" parent="."]
+offset_right = 200.0
+offset_bottom = 300.0
+pivot_offset = Vector2(100, 150)
+
+[node name="Bars" type="VBoxContainer" parent="CardArea"]
+layout_mode = 2
+
+[node name="CostContainer" type="MarginContainer" parent="CardArea/Bars"]
+layout_mode = 2
+size_flags_vertical = 4
+theme_override_constants/margin_left = 10
+theme_override_constants/margin_top = 5
+
+[node name="Cost" type="Label" parent="CardArea/Bars/CostContainer"]
+layout_mode = 2
+text = "X"
+
+[node name="NameContainer" type="MarginContainer" parent="CardArea/Bars"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+
+[node name="Name" type="Label" parent="CardArea/Bars/NameContainer"]
+layout_mode = 2
+text = "Name"
+
+[node name="ImgContainer" type="MarginContainer" parent="CardArea/Bars"]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+
+[node name="Img" type="ColorRect" parent="CardArea/Bars/ImgContainer"]
+layout_mode = 2
+
+[node name="MidleContainer" type="MarginContainer" parent="CardArea/Bars"]
+layout_mode = 2
+
+[node name="MidleBar" type="HBoxContainer" parent="CardArea/Bars/MidleContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_override_constants/separation = 130
+
+[node name="Damage" type="Label" parent="CardArea/Bars/MidleContainer/MidleBar"]
+layout_mode = 2
+text = "X"
+
+[node name="Healt" type="Label" parent="CardArea/Bars/MidleContainer/MidleBar"]
+layout_mode = 2
+text = "X"
+
+[node name="BackColor2" type="MarginContainer" parent="."]
+show_behind_parent = true
+offset_right = 200.0
+offset_bottom = 300.0
+
+[node name="Border" type="ColorRect" parent="BackColor2"]
+layout_mode = 2
+color = Color(0.85098, 0.886275, 0, 1)
+
+[node name="BackColor1" type="MarginContainer" parent="."]
+show_behind_parent = true
+offset_left = 5.0
+offset_top = 5.0
+offset_right = 195.0
+offset_bottom = 295.0
+
+[node name="Background" type="ColorRect" parent="BackColor1"]
+layout_mode = 2
+color = Color(0.190762, 0.190762, 0.190762, 1)
+
+[node name="SelectedButton" type="TextureButton" parent="."]
+offset_right = 200.0
+offset_bottom = 300.0

@@ -1,0 +1,25 @@
+[gd_scene load_steps=3 format=3 uid="uid://bdek4pjyp2ggs"]
+
+[ext_resource type="Script" path="res://Scripts/Entitys/Play_Escene.cs" id="1_6n0d0"]
+[ext_resource type="PackedScene" uid="uid://dkj6ohl0bi3br" path="res://Entitys/Godot_Escene/Player_Hand.tscn" id="2_eaj12"]
+
+[node name="PlayEscene" type="Node2D"]
+script = ExtResource("1_6n0d0")
+
+[node name="Background" type="MarginContainer" parent="."]
+offset_right = 1152.0
+offset_bottom = 648.0
+
+[node name="Color" type="ColorRect" parent="Background"]
+layout_mode = 2
+color = Color(0.094803, 0.144873, 0.0948082, 1)
+
+[node name="DrawButton" type="Button" parent="."]
+offset_left = 54.0
+offset_top = 371.0
+offset_right = 104.0
+offset_bottom = 402.0
+text = "Draw"
+
+[node name="PlayerHand" parent="." instance=ExtResource("2_eaj12")]
+position = Vector2(552, 366)

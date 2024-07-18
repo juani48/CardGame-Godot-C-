@@ -1,0 +1,28 @@
+[gd_scene load_steps=2 format=3 uid="uid://do4dmyhy1o1qc"]
+
+[ext_resource type="Script" path="res://Scripts/Entitys/Menu.cs" id="1_8pkco"]
+
+[node name="Menu" type="Node2D"]
+script = ExtResource("1_8pkco")
+
+[node name="BackgroundMenu" type="MarginContainer" parent="."]
+offset_right = 1152.0
+offset_bottom = 648.0
+
+[node name="Color" type="ColorRect" parent="BackgroundMenu"]
+layout_mode = 2
+color = Color(0.122252, 0.122252, 0.122252, 1)
+
+[node name="NameGame" type="Label" parent="."]
+offset_left = 515.0
+offset_top = 153.0
+offset_right = 601.0
+offset_bottom = 176.0
+text = "Card Game"
+
+[node name="PlayButton" type="Button" parent="."]
+offset_left = 119.0
+offset_top = 328.0
+offset_right = 160.0
+offset_bottom = 359.0
+text = "Play"

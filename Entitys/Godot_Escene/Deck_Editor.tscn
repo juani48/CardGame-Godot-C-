@@ -1,0 +1,11 @@
+[gd_scene format=3 uid="uid://bjxvk1v6jwx1p"]
+
+[node name="DeckEditor" type="Node2D"]
+
+[node name="BackgroundMenu" type="MarginContainer" parent="."]
+offset_right = 1152.0
+offset_bottom = 648.0
+
+[node name="Color" type="ColorRect" parent="BackgroundMenu"]
+layout_mode = 2
+color = Color(0.122252, 0.122252, 0.122252, 1)
